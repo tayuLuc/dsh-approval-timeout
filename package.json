@@ -1,0 +1,18 @@
+{
+  "name": "dsh-approval-timeout",
+  "version": "0.1.0",
+  "description": "Auto-reject pending approval prompts after a timeout, like ask_user_question does — an AFK operator no longer pins an agent turn hostage.",
+  "type": "module",
+  "main": "lib/index.js",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "license": "MIT"
+}

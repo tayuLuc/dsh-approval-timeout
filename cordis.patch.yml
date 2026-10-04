@@ -1,0 +1,14 @@
+# Bundle patch for dsh-approval-timeout: inserts its plugin row into the
+# profile roster. Applied as a profile bundle layer when the package is
+# listed in `dsh.profile.bundles` (dsh.bundle.patch in package.json).
+#
+# Config keys are optional; the values below are the plugin's own defaults.
+# Env overrides win: DSH_APPROVAL_TIMEOUT_MS / DSH_APPROVAL_DENY_ON_TIMEOUT /
+# DSH_APPROVAL_GRACE_MS.
+- insert:
+    - id: dsh-approval-timeout
+      name: dsh-approval-timeout
+      config:
+        timeoutMs: 180000
+        denyOnTimeout: true
+        graceFirstMs: 3000
